@@ -25,3 +25,4 @@ This is an AI-powered movie recommendation system that suggests movies based on 
    ```bash
    git clone https://github.com/YOUR_USERNAME/emotion-movie-recommender.git
    cd emotion-movie-recommender
+# emotion-movie-recommender
