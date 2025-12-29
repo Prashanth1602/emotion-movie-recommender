@@ -1,4 +1,29 @@
-.__pychace__/
-.__pycache__/
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
 .venv/
+venv/
+env/
+
+# OS files
 .DS_Store
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Test / coverage
+.coverage
+htmlcov/
+.pytest_cache/
