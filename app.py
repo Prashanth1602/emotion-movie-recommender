@@ -3,8 +3,17 @@ from pydantic import BaseModel
 from recommender import MovieRecommender
 import asyncio
 from functools import partial
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Emotion Based Movie Recommender")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 recommender = MovieRecommender()
 

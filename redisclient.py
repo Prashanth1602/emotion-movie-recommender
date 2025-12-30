@@ -1,9 +1,14 @@
 import redis
+import os
+
+redis_host = os.getenv("REDIS_HOST", "localhost")
+redis_port = int(os.getenv("REDIS_PORT", 6379))
+redis_password = os.getenv("REDIS_PASSWORD", None)
 
 redis_client = redis.Redis(
-    host = "localhost",
-    port = 6379,
-    db = 0,
+    host=redis_host,
+    port=int(redis_port),
+    password=redis_password,
     decode_responses=True
 )
 
