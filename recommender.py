@@ -78,20 +78,3 @@ class MovieRecommender:
         return movie_list, emotion, cache_hit
 
 
-if __name__ == "__main__":
-    recommender = MovieRecommender()
-
-    while True:
-        text = input("Enter your experience (or 'quit'): ").strip()
-        if text.lower() == "quit":
-            print("Bye")
-            break
-
-        start = time.time()
-        movies, emotion, cached = recommender.get_recommendations(text)
-        end = time.time()
-
-        print("\nMovies:", movies)
-        print("Emotion:", emotion)
-        print("Cache hit:", cached)
-        print("Time taken:", round(end - start, 4), "seconds\n")

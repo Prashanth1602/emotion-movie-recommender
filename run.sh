@@ -31,4 +31,4 @@ echo " Starting Redis..."
 redis-server --daemonize yes
 
 echo "Running recommender..."
-python recommender.py
+uvicorn app:app --reload
