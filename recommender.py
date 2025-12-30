@@ -7,12 +7,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 from transformers import pipeline
 from redisclient import RedisCache
 
-try:
-    stopwords.words("english")
-except LookupError:
-    nltk.download("stopwords")
-
-
 class MovieRecommender:
     def __init__(self) -> None:
         self.movies_df = pd.read_csv("movies.csv")
