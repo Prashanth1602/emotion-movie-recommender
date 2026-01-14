@@ -5,7 +5,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
     
-    redis_host: str 
-    redis_port: int 
+    redis_host: str = "127.0.0.1"
+    redis_port: int = 6379
 
 settings = Settings()

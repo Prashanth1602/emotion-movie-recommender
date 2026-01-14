@@ -4,7 +4,7 @@ from contextlib import asynccontextmanager
 from recommender import MovieRecommender
 from config import settings
 from redisclient import RedisCache
-from api.routes import router
+from app.api.routes import router
 
 import logging
 

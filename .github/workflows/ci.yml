@@ -27,6 +27,6 @@ jobs:
       - name: Run import check
         run: |
           python - <<EOF
-          from app import main
+          from app.main import app
           print("FastAPI app loaded successfully")
           EOF
